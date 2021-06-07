@@ -5,11 +5,11 @@
 
 <h4 align="center">This is where you can find <a href="https://github.com/axislinux/releases/releases">releases</a> of Axis Linux</h4>
 
-<p align="center"><img alt="powered-by-electricity" src="https://forthebadge.com/images/badges/powered-by-electricity.svg"/></p>
+<p align="center"><img alt="powered-by-electricity" src="https://forthebadge.com/images/badges/built-with-love.svg"/></p>
 
 <p align="center">
-  <img alt="license" src="https://img.shields.io/github/license/axislinux/axis-live?style=for-the-badge"/>
   <img alt="latest-release" src="https://img.shields.io/github/v/release/axislinux/releases?include_prereleases&style=for-the-badge"/>
+  <img alt="license" src="https://img.shields.io/github/license/axislinux/releases?style=for-the-badge"/>
 </p>
 
 ---
@@ -35,12 +35,15 @@ gpg --recv-keys A182D760A59FDFDD
 
 2. Then, verify gpg key of the file
 ```console
-gpg --verify axislinux-XXXX.XX.XX-x86_64.iso.sig
+gpg --verify axislinux-XXXX.XX.XX-x86_64.iso.sig axislinux-XXXX.XX.XX-x86_64.iso
 ```
+*The output should be XXCoreRangerX's public gpg key fingerprint (currently `FD11A3293A6830E6D28E1408A182D760A59FDFDD`).*
+
 3. Lastly, check sha512 checksum
 ```console
-sha512sum axislinux-XXXX.XX.XX-x86_64.iso
+sha512sum axislinux-XXXX.XX.XX-x86_64.iso && cat axislinux-XXXX.XX.XX-x86_64.iso.sha512sum
 ```
+*This command should return 2 lines of identical hashes.*
 
 ## License
-This project is licensed under the [MIT license](https://github.com/axislinux/axis-live/blob/master/LICENSE).
+This project is licensed under the [GPL-3.0 license](https://github.com/axislinux/releases/blob/master/LICENSE).
