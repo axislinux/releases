@@ -41,9 +41,9 @@ gpg --verify axislinux-XXXX.XX.XX-x86_64.iso.sig axislinux-XXXX.XX.XX-x86_64.iso
 
 3. Lastly, check sha512 checksum
 ```console
-sha512sum axislinux-XXXX.XX.XX-x86_64.iso && cat axislinux-XXXX.XX.XX-x86_64.iso.sha512sum
+sha512sum --check axislinux-XXXX.XX.XX-x86_64.iso.sha512sum
 ```
-*This command should return 2 lines of identical hashes.*
+*This command should tell whether the checksum is correct.*
 
 ## License
 This project is licensed under the [GPL-3.0 license](https://github.com/axislinux/releases/blob/master/LICENSE).
